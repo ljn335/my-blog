@@ -1,0 +1,229 @@
+/*
+ * 工具样式表
+ */
+.clearfix{
+	*zoom:1
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+.head_other{
+	height:38px;
+	border-bottom:4px solid #ffc300;
+	background:url(../img/head_other_bg.png) repeat-x;
+	/*background-color:red;*/
+	color:#f39b03;
+	padding-top:12px;
+}
+.head_other a{
+	color:#f39b03;
+}
+.head_other .head_other_title{
+	float:left;
+}
+.head_other_title a,.head_other_title span{
+	float:left;
+}
+.head_other_title a{
+	font-size:20px;
+	font-weight:bold;
+	font-family:"微软雅黑";
+	line-height:38px;
+	margin-right: 9px
+}
+.head_other_title span{
+	font-size:14px;
+	line-height:30px;
+	font-family:Georgia;
+	margin-top:8px;
+}
+.head_other .head_other_info{
+	float:right;
+}
+.head_other_more{
+	position:relative;
+	display:block;
+	width:115px;
+	height:22px;
+	background:url(../img/more.png) no-repeat;
+	padding-left:20px;
+	margin:7px 10px 0px 0px;
+	font-size:14px;
+	line-height:22px;
+}
+.head_other_more span{
+	position:absolute;
+}
+.head_other_more .more_ico{
+	position:absolute;
+	top:8px;
+	right:18px;
+	width:8px;
+	height:7px;
+	background:url(../img/more_ico.png) no-repeat;
+	overflow: hidden;
+}
+
+
+
+/*每项头部的列表*/
+.head_list{
+	height:30px;
+	margin:10px 0px 16px;
+	font:14px/28px "微软雅黑";
+	text-align: center;
+}
+.head_list .head_item{
+	float:left;
+	width:98px;
+	height:28px;
+	border:1px solid #ffc300;
+	/*transform:skewX(-20deg);*/
+	margin-right:-1px;
+}
+.head_list .first_f1{
+	background-color:#ffc300;
+}
+.head_item a{
+	color:#333333;
+}
+.first_f1 a{
+	color:#3d3d3d;
+}
+
+
+
+
+/*banner*/
+.small_banner{
+	width:390px;
+	height:323px;
+}
+.banner_top{
+	position:relative;
+	width:390px;
+	height:230px;
+}
+.banner_top .banner_top_img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:390px;
+	height:230px;
+	overflow:hidden;
+}
+.small_banner .btn_derection{
+	position:absolute;
+	top:95px;
+	left:0px;
+	width:100%;
+	height:40px;
+}
+.btn_derection_left{
+	left:0px;
+	top:0px;
+	background:url(../img/btn_left.png) no-repeat 15px 12px;
+}
+.btn_derection_right{
+	right:0px;
+	top:0px;
+	background:url(../img/btn_right.png) no-repeat 15px 12px;
+}
+.btn_derection_left,.btn_derection_right{
+	position:absolute;
+	width:40px;
+	height:40px;
+	background-color:rgba(0,0,0,.5);
+}
+.banner_top .btn_wrap{
+	position:absolute;
+	left:0px;
+	bottom:9px;
+	width:100%;
+	height:10px;
+	text-align: center;
+	line-height:9px;
+}
+.btn_wrap .btn_page{
+	display: inline-block;
+	height:10px;
+	overflow:hidden;
+}
+.btn_page a{
+	float:left;
+	width:10px;
+	height:10px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-right:14px;
+	overflow:hidden;
+}
+.btn_page a:hover{
+	background-color: #ec7268;
+}
+.banner_middle{
+	width:390px;
+	height:93px;
+}
+.middle_img1,.middle_img2{
+	float:left;
+	width:195px;
+	height:93px;
+	overflow:hidden;
+}
+.banner_bottom{
+	width:390px;
+	height:132px;
+}
+.bottom_img1,.bottom_img2{
+	float:left;
+	width:195px;
+	height:132px;
+	overflow:hidden;
+}
+
+
+/*城市旅游景点、酒店列表*/
+.city_list{
+	margin-top:18px;
+	margin-right:-4px;
+	/*background-color:red;*/
+}
+.city_list .city_item{
+	float:left;
+	width:192px;
+	height:133px;
+	border-left:1px solid #ee8e17;
+	margin-right:4px;
+}
+.city_item h5{
+	height:14px;
+	padding-left:11px;
+	border-left:2px solid #ee8e17;
+	font-size:14px;
+	color:#ee8e17;
+	overflow: hidden;
+}
+.city_list_list .city_item_item{
+	float:left;
+	height:18px;
+	overflow: hidden;
+	font:14px/18px "宋体";
+	margin-top:21px;
+	
+}
+.city_item_item a{
+	float:left;
+	width:64px;
+	text-align:center;
+	color:#355976;
+	overflow: hidden;
+}
+
+
+
+

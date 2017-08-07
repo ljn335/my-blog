@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../css/public_style.css">
+</head>
+<body>
+	<header class="head">
+		<div class="head_content">
+			<div class="head_left">
+				<h1 class="logo"></h1>
+				<h2 class="title">关于弹性盒模型</h2>
+				<div class="info">
+					<span class="time"><i></i>2017年7月1日</span>
+					<span class="visits"><i></i>20</span>
+					<span class="comments"><i></i>0</span>
+				</div>
+			</div>
+			<div class="head_right">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<p class="text">引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的条目进行排列、对齐和分配空白空间。即便容器中条目的尺寸未知或是动态变化的，弹性盒布局模型也能正常的工作。在该布局模型中，容器会根据布局的需要，调整其中包含的条目的尺寸和顺序来最好地填充所有可用的空间。当容器的尺寸由于屏幕大小或窗口尺寸发生变化时，其中包含的条目也会被动态地调整。比如当容器尺寸变大时，其中包含的条目会被拉伸以占满多余的空白空间；当容器尺寸变小时，条目会被缩小以防止超出容器的范围。弹性盒布局是与方向无关的。在传统的布局方式中，block 布局是把块在垂直方向从上到下依次排列的；而 inline 布局则是在水平方向来排列。弹性盒布局并没有这样内在的方向限制，可以由开发人员自由操作。</p>
+		<ul class="list">
+			<li class="item">
+				<h3 class="title">1.display:flex 设置弹性盒模型</h3>
+				<p class="info">该元素下所有的内容都遵从弹性盒模型的规则进行排列</p>
+			</li>
+			<li class="item">
+				<h3 class="title">2.flex-direction 设置主轴方向</h3>
+				<p class="info">该元素下的内容以什么方向进行排列</p>
+				<div class="info_list">
+					<span><i></i>row 从左向右排列(默认值)</span>
+					<span><i></i>row-reverse 从右向左排列</span>
+					<span><i></i>column 从上往下排列</span>
+					<span><i></i>column-reverse 从下往上排列</span>
+				</div>
+			</li>
+			<li class="item">
+				<h3 class="title">3.justify-content 主轴对齐</h3>
+				<p class="info">主轴上的元素与富裕空间之间的排列关系</p>
+				<div class="info_list">
+					<span><i></i>flex-start (默认) 元素在开始位置 富裕空间占据另一侧</span>
+					<span><i></i>flex-end 富裕空间在开始位置 元素占据另一侧</span>
+					<span><i></i>center 元素居中 富裕空间 平分左右两侧</span>
+					<span><i></i>space-between 富裕空间在元素之间平均分配</span>
+					<span><i></i>space-around  富裕空间在元素两侧平均分配</span>
+				</div>
+			</li>
+			<li class="item">
+				<h3 class="title">4.align-items 侧轴对齐</h3>
+				<p class="info">元素在侧轴方向上以什么样的方式进行对齐</p>
+				<div class="info_list">
+					<span><i></i>flex-start (默认) 元素在开始位置 富裕空间占据另一侧</span>
+					<span><i></i>flex-end 富裕空间在开始位置 元素占据另一侧</span>
+					<span><i></i>center 元素居中 富裕空间 平分左右两侧</span>
+				</div>
+			</li>
+			<li class="item">
+				<h3 class="title">5.flex-wrap 换行</h3>
+				<p class="info">元素以自身实际大小进行展示，超出父级宽度时，会自动换行。</p>
+				<div class="info_list">
+					<span><i></i>nowrap (默认)</span>
+					<span><i></i>wrap 换行</span>
+					<span><i></i>wrap-reverse 反向换行</span>
+				</div>
+			</li>
+			<li class="item">
+				<h3 class="title">6.align-content 堆栈伸缩行</h3>
+				<p class="info">当设置换行后，处理每行元素之间的留白间隔。</p>
+				<div class="info_list">
+					<span><i></i>align-content会更改 flex-wrap 的行为。它和align-items 相似，但是不是对齐伸缩项目，它对齐的是伸缩行。</span>
+					<span><i></i>flex-start (默认) 元素在开始位置 富裕空间占据另一侧</span>
+					<span><i></i>flex-end 富裕空间在开始位置 元素占据另一侧</span>
+					<span><i></i>center 元素居中 富裕空间 平分左右两侧</span>
+					<span><i></i>space-between 富裕空间在元素之间平均分配</span>
+					<span><i></i>space-around  富裕空间在元素两侧平均分配</span>
+				</div>
+			</li>
+			<li class="item">
+				<h3 class="title">7.flex-flow</h3>
+				<p class="info">设置主轴与换行的缩写</p>
+				<div class="info_list">
+					<span><i></i>flex-flow 是 flex-direction 和 flex-wrap 的缩写</span>
+					<span><i></i>flex-flow: [flex-direction] [flex-wrap]</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body,h1,h2,h3,h4,p{
+	margin:0px;
+}
+ul,ol{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear: both;
+}
+
+/*   从a标签跳到固定的盒子高度*/

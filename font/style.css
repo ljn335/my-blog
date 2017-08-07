@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'sell-icon';
+  src:  url('fonts/sell-icon.eot?lq1m3p');
+  src:  url('fonts/sell-icon.eot?lq1m3p#iefix') format('embedded-opentype'),
+    url('fonts/sell-icon.ttf?lq1m3p') format('truetype'),
+    url('fonts/sell-icon.woff?lq1m3p') format('woff'),
+    url('fonts/sell-icon.svg?lq1m3p#sell-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sell-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
+.icon-sina-weibo:before {
+  content: "\ea9a";
+}
+.icon-github:before {
+  content: "\eab0";
+}

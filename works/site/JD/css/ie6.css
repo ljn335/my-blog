@@ -1,0 +1,42 @@
+.top_right .shuxian{
+	overflow: hidden;
+}
+.nav_left .vl{
+	overflow: hidden;
+}
+.subnav{
+	line-height: 30px;
+}
+.center{
+	overflow: hidden;
+}
+.pa .fengexian{
+	overflow: hidden;
+}
+#right_scroll{
+	display: none;
+}
+.cont1 .cont1_n1{
+	overflow: hidden;
+}
+.cont3_2{
+	overflow: hidden;
+}
+.cont2_rig{
+	overflow: hidden;
+}
+.cont2_rig .shuxian{
+	overflow: hidden;
+}
+.cont6_cent{
+	overflow: hidden;
+}
+.foot_top li{
+	float: left;
+}
+.nav_left a{
+	padding:0;
+}
+.cont6_com{
+	overflow: hidden;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="box">
+		<div class="shadow1"></div>
+		<div class="shadow2"></div>
+		<div class="box_content">
+			<div class="All_item">
+				<div class="item">
+					<img src="img/img2.jpg" alt="">
+					<div class="mask">
+						<p>《扫毒》</p>
+						<p>该片讲述了共同效力于毒品调查科的三个好兄弟，在执行跨国大型扫毒行动时遭遇反卧底，生死关头为求存活而有了不同表现的故事。</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/img3.jpg" alt="">
+					<div class="mask">
+						<p>《暴疯语》</p>
+						<p>影片讲述的是范国生患有精神疾患，因病发作，杀害妻子。他经医生周明杰的治疗，痊愈并重返社会，不料再次失控，被警方锁定。</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/img4.jpg" alt="">
+					<div class="mask">
+						<p>《绑架者》</p>
+						<p>该片讲述了重案组警察林薇在女儿丢失后，与唯一有嫌疑却失忆的绑匪博弈，最后找出幕后真凶的故事。</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/img5.jpg" alt="">
+					<div class="mask">
+						<p>《刺客》</p>
+						<p>《刺客信条》根据育碧同名电子系列游戏改编，讲述了卡勒姆·林奇获得先祖阿圭拉超凡的知识和能力来对抗圣殿骑士组织的故事。</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/img6.jpg" alt="">
+					<div class="mask">
+						<p>《闺蜜》</p>
+						<p>《闺蜜》由知名香港女导演黄真真执导，陈意涵、薛凯琪、杨子姗、余文乐、钟汉良、吴建豪等众多明星主演，是一部有关于爱情、友情的电影。</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/img2.jpg" alt="">
+					<div class="mask">
+						<p>《扫毒》</p>
+						<p>该片讲述了共同效力于毒品调查科的三个好兄弟，在执行跨国大型扫毒行动时遭遇反卧底，生死关头为求存活而有了不同表现的故事。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="tools.js"></script>
+	<script>
+		var Allitem=document.querySelector('.All_item');
+		var mask=document.querySelectorAll('.item .mask');
+		//console.log(Allitem,mask);
+		var now=0;
+		var w=384;
+
+		setTimeout(function (){
+			mTween(mask[now],{bottom:0},40,'linear');
+		},600);
+		setTimeout(function (){
+			mTween(mask[now],{bottom:-80},40,'linear');
+		},2400);
+
+		var timer=setInterval(function (){
+			if(now==mask.length-1){
+				now=0;
+				Allitem.style.left=0;
+			}
+			now++;
+			mTween(Allitem,{left:-w*now},20,'linear');
+			setTimeout(function (){
+				mTween(mask[now],{bottom:0},40,'linear');
+			},600);
+			setTimeout(function (){
+				mTween(mask[now],{bottom:-80},40,'linear');
+			},2400);
+		},3000);
+	</script>
+</body>
+</html>

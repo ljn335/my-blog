@@ -1,0 +1,52 @@
+body{
+	font-family: "微软雅黑";
+}
+a{
+	font-size: 12px;
+	color:#999999;
+	font-family:"微软雅黑";
+}
+.acqu{
+	color:#f10215;
+}
+.clear{
+	zoom:1
+}
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.mr10{
+	margin-right: 10px;
+}
+.ml10{
+	margin-left:10px
+}
+.mb30{
+	margin-bottom:30px;
+}
+.mb10{
+	margin-bottom:10px;
+}
+.mt10{
+	margin-top: 10px;
+}
+.mt30{
+	margin-top:30px;
+}
+.mb10{
+	margin-bottom:10px;
+}
+a:hover{
+	color:#da2d15;
+}
+.bn{
+	border:none;
+}

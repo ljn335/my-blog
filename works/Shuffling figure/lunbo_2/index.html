@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="box">
+		<div class="box_content">
+			<div class="Allimgs">
+				<img src="imgs/5.jpg" alt="">
+				<img src="imgs/1.jpg" alt="">
+				<img src="imgs/2.jpg" alt="">
+				<img src="imgs/3.jpg" alt="">
+				<img src="imgs/4.jpg" alt="">
+				<img src="imgs/5.jpg" alt="">
+				<img src="imgs/1.jpg" alt="">
+			</div>
+			<a href="javascript:;" class="prev"><</a>
+			<a href="javascript:;" class="next">></a>
+			<div class="navs">
+				<a href="javascript:;" class="active"></a>
+				<a href="javascript:;" class=""></a>
+				<a href="javascript:;" class=""></a>
+				<a href="javascript:;" class=""></a>
+				<a href="javascript:;" class=""></a>
+			</div>
+		</div>
+	</div>
+	<script src="tools.js"></script>
+	<script>
+		//需求
+		//1.点击下一张按钮的时候，图片随着点击次数依次切换，当点击到第五张的时候，
+		//获取元素
+		var prev=document.querySelector('.prev');
+		var next=document.querySelector('.next');
+		var Allimgs=document.querySelector('.Allimgs');
+		var imgs=document.querySelectorAll('.Allimgs img');
+		var navs=document.querySelectorAll('.navs a');
+		var now=1;//当前图片
+		var w=420;//一张图片的宽度
+		var len=navs.length;//小圆点的长度
+		var prevNavs=0;//上一个按钮
+		// var n=0;
+		var index=0;
+
+
+		css(Allimgs,'width',w*(len+2));
+		next.onclick=function (){
+			if(now==len+1){
+				now=1;
+				// Allimgs.style.left=-w;
+				css(Allimgs,'left',-w);
+			}
+			now++;
+			index=index<len-1?++index:0;
+
+			mTween(Allimgs,{left:-now*w},20,'linear');
+			mTween(navs[prevNavs],{height:10},20,'linear');
+			mTween(navs[index],{height:20},20,'linear');
+			prevNavs=index;
+		};
+
+		prev.onclick=function (){
+			if(now==0){
+				now=len;
+				// Allimgs.style.left=-w*len;
+				css(Allimgs,'left',-w*len);
+			}
+			now--;
+			index=index>0?--index:len-1;
+
+			mTween(Allimgs,{left:-now*w},20,'linear');
+			mTween(navs[prevNavs],{height:10},20,'linear');
+			mTween(navs[index],{height:20},20,'linear');
+			prevNavs=index;
+		};
+
+		for(var i=0;i<len;i++){
+			(function (i){
+				navs[i].onclick=function (){
+					// navs[prevNavs].className='';
+					// navs[i].className='active';
+					now = i + 1;
+            		index = i;
+					mTween(Allimgs,{left:-(i+1)*w},20,'linear');
+					mTween(navs[prevNavs],{height:10},20,'linear');
+					mTween(navs[index],{height:20},20,'linear');
+					prevNavs=index;
+				};
+			})(i)
+		}
+
+
+
+
+		// next.onclick=function (){
+		// 	index++;
+		// 	mTween(Allimgs,{left:-w*index},30,'linear',function (){
+		// 		if(index==len){
+		// 			Allimgs.style.left=0;
+		// 			index=0;
+		// 		}
+		// 		if(n<len-1){
+		//           n++;
+		//         }else{
+		//           n=0;
+		//         }
+		// 		navs[prevNavs].className='';
+		// 		navs[n].className='active';
+		// 		prevNavs=n;
+		// 	});
+		// };
+		// prev.onclick=function (){
+		// 	index--;
+		// 	mTween(Allimgs,{left:w*index},30,'linear',function (){
+		// 		if(index==0){
+		// 			Allimgs.style.left=-w*(len-1)+'px';
+		// 			index=len-1;
+		// 		}
+		// 	});
+		// };
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../css/public_style.css">
+</head>
+<body>
+	<header class="head">
+		<div class="head_content">
+			<div class="head_left">
+				<!-- <div class="back">>>返回首页</div> -->
+				<h1 class="logo"></h1>
+				<h2 class="title">关于this</h2>
+				<div class="info">
+					<span class="time"><i></i>2017年7月1日</span>
+					<span class="visits"><i></i>20</span>
+					<span class="comments"><i></i>0</span>
+				</div>
+			</div>
+			<div class="head_right">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<ul class="list">
+			<li class="item">
+				<h3 class="title">1.直接调用</h3>
+				<p class="info">函数名+( )直接调用，在非严格下this->window.严格模式下this->undefined</p>
+			</li>
+			<li class="item">
+				<h3 class="title">2.事件调用</h3>
+				<p class="info">this->触发事件的元素</p>
+			</li>
+			<li class="item">
+				<h3 class="title">3.定时器</h3>
+				<p class="info">this->window.</p>
+			</li>
+			<li class="item">
+				<h3 class="title">4.new调用</h3>
+				<p class="info">this->函数内部隐式创建的实例对象</p>
+			</li>
+			<li class="item">
+				<h3 class="title">5.call和apply</h3>
+				<p class="info">this->第一个参数</p>
+			</li>
+			<li class="item">
+				<h3 class="title">6.对象属性调用</h3>
+				<p class="info">this->调用函数的对象</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
