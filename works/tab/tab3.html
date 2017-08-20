@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>仿淘宝选项卡</title>
+	<style>
+		body{
+			margin:0;
+		}
+		ul{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		.list{
+			position:relative;
+			width:100%;
+			list-style:none;
+		}
+		.list .item{
+			width:30%;
+			
+		}
+		/*选择type='radio'的所有input元素*/
+		.list input[type='radio']{
+			position:fixed;
+			top:-100px;
+			left:-100px;
+		}
+		.list .item_title{
+			display:block;
+			position:relative;
+			padding:15px 0 15px 15px;
+			margin:0;
+		}
+		/*选择前面有(type='radio'并且选中的input元素)的每个.item_title元素*/
+		.list input[type='radio']:checked ~ .item_title{
+			color:#03a9f4;
+			border-left:3px solid #03a9f4;
+			border-bottom:1px solid #d9d9d9;
+			box-sizing:border-box;				
+		}
+		.list .item:not(:first-child)  input[type='radio']:checked ~  .item_title{
+			border-top:1px solid #d9d9d9;
+		}
+		.list input[type='radio']:checked ~ .item_title:after{
+			content:'';
+			position:absolute;
+			height:100%;
+			background:#fff;
+			right:0px;
+			width:1px;
+			top:0;
+			z-index:1;	
+		}
+		.list input[type='radio']~.item_ul{
+			display:none;
+		}
+		.list input[type='radio']:checked ~ .item_ul{
+			position:absolute;
+			display:block;
+			top:0;
+			right:0;
+			width:70%;
+			min-height:100%;
+			overflow-y:auto;
+			padding-left:0;	
+			border-left:1px solid #d9d9d9;	
+				
+		}
+		.list .item_ul_li{
+			display:block;
+			margin-left:16px;
+			color:#333;
+			padding:15px 0;
+			border-bottom:1px solid #d9d9d9;				
+		}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li class="item">
+			<input type="radio" name="choose" id="item1" checked>
+			<label for="item1" class="item_title">女装</label>
+			<ul class="item_ul">
+				<li class="item_ul_li">秋新品</li>
+				<li class="item_ul_li">连衣裙</li>
+				<li class="item_ul_li">针织衫</li>
+				<li class="item_ul_li">毛衣</li>
+				<li class="item_ul_li">短外套</li>
+				<li class="item_ul_li">风衣</li>
+				<li class="item_ul_li">裤子</li>
+				<li class="item_ul_li">卫衣/绒衫</li>
+				<li class="item_ul_li">T恤</li>
+			</ul>
+		</li>
+		<li class="item">
+			<input type="radio" name="choose" id="item2">
+			<label for="item2" class="item_title">男装</label>
+			<ul class="item_ul">
+				<li class="item_ul_li">外套</li>
+				<li class="item_ul_li">夹克</li>
+				<li class="item_ul_li">衬衫</li>
+				<li class="item_ul_li">T恤</li>
+				<li class="item_ul_li">运动外套</li>
+				<li class="item_ul_li">棒球服</li>
+			</ul>
+		</li>
+		<li class="item">
+			<input type="radio" name="choose" id="item3">
+			<label for="item3" class="item_title">鞋靴</label>
+			<ul class="item_ul">
+				<li class="item_ul_li">凉鞋新款</li>
+				<li class="item_ul_li">平底凉鞋</li>
+				<li class="item_ul_li">抢新品</li>
+				<li class="item_ul_li">猫跟鞋</li>
+				<li class="item_ul_li">休闲鞋</li>
+				<li class="item_ul_li">板鞋</li>
+				<li class="item_ul_li">帆布鞋</li>
+				<li class="item_ul_li">运动风</li> 
+			</ul>
+		</li>
+		<li class="item">
+			<input type="radio" name="choose" id="item4">
+			<label for="item4" class="item_title">美妆</label>
+			<ul class="item_ul">
+				<li class="item_ul_li">面膜</li>
+				<li class="item_ul_li">洁面</li>
+				<li class="item_ul_li">防晒</li>
+				<li class="item_ul_li">爽肤水</li>
+				<li class="item_ul_li">眼霜</li>
+				<li class="item_ul_li">乳液</li>
+				<li class="item_ul_li">面霜</li>
+				<li class="item_ul_li">精华</li>
+				<li class="item_ul_li">卸妆</li>
+				<li class="item_ul_li">香水</li>
+				<li class="item_ul_li">眼线</li>
+				<li class="item_ul_li">粉底液</li>
+			</ul>
+		</li>
+		<li class="item">
+			<input type="radio" name="choose" id="item5">
+			<label for="item5" class="item_title">手机</label>
+			<ul class="item_ul">
+				<li class="item_ul_li">iphone7plus</li>
+				<li class="item_ul_li">iphone6s</li>
+				<li class="item_ul_li">华为mate9</li>
+				<li class="item_ul_li">荣耀</li>
+				<li class="item_ul_li">三星</li>
+				<li class="item_ul_li">三星s7</li>
+				<li class="item_ul_li">小米</li>
+				<li class="item_ul_li">红米note3</li>
+				<li class="item_ul_li">华为mate8</li>
+				<li class="item_ul_li">魅族</li>
+				<li class="item_ul_li">oppo</li>
+				<li class="item_ul_li">vivo</li>
+			</ul>
+		</li>
+		<li class="item">
+			<input type="radio" name="choose" id="item6">
+			<label for="item6" class="item_title">手表</label>
+			<ul class="item_ul">
+				<li class="item_ul_li">天梭</li>
+				<li class="item_ul_li">运动表</li>
+				<li class="item_ul_li">卡西欧</li>
+				<li class="item_ul_li">国表</li>
+				<li class="item_ul_li">时尚表</li>
+				<li class="item_ul_li">女表</li>
+				<li class="item_ul_li">儿童表</li>
+				<li class="item_ul_li">学生表</li>
+			</ul>
+		</li>
+		<li class="item">
+			<input type="radio" name="choose" id="item7">
+			<label for="item7" class="item_title">童装玩具</label>
+			<ul class="item_ul">
+				<li class="item_ul_li">儿童自行车</li>
+				<li class="item_ul_li">电动童车</li>
+				<li class="item_ul_li">遥控模型</li>
+				<li class="item_ul_li">户外玩具</li>
+				<li class="item_ul_li">亲子玩具</li>
+				<li class="item_ul_li">学习用品</li>
+				<li class="item_ul_li">描红本</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- 更多css选择器参考：http://www.w3school.com.cn/cssref/css_selectors.asp -->
+</body>
+</html>

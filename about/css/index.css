@@ -30,7 +30,7 @@ body{
 	width:120px;
 	height:120px;
 	border-radius: 50%;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .content p{
 	margin-top:15px;
@@ -51,19 +51,18 @@ body{
 	background:url(../../img/weixin.jpg);
 }
 .content .experience{
-	margin:30px 0px;
+	margin:50px 0px;
 	padding:30px;
-	background-color: #fff;
+	/*background-color: #fff;*/
     border: 1px solid #e7eaf1;
     border-radius: 3px;
     box-sizing: border-box;
     box-shadow: 0 1px 3px rgba(0,37,55,.06);
 	/*border-top:1px solid rgb(231, 234, 241);*/
 }
-.experience .title{
-	/*text-align: center;*/
+/*.experience .title{
 	margin-bottom:20px;
-}
+}*/
 .experience .experience_content{
 	height:300px;
 	/*background:pink;*/
@@ -89,10 +88,20 @@ body{
 	width:130px;
 	height:130px;
 	border:1px solid rgb(231, 234, 241);
+	/*box-sizing:border-box;*/
 	border-radius: 50%;
 	background: #fff;
-	/*margin-right:50px;*/
-}.item span{
+}
+.list .item:hover{
+	/*background: #F7F3EE;*/
+	/*background: rgba(0,0,0,.1);*/
+	border:1px solid #fff;
+	box-shadow: 3px 3px 3px #ccc;
+}
+/*.list .item:hover .time{
+	color:#bbb;
+}*/
+.item span{
 	display:block;
 }
 .item .name,.item .time{

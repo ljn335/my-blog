@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+body,ul{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+.wrap{
+	width: 964px;
+	height: 328px;
+	padding: 8px 4px;
+	border:1px solid #c6c6c6;
+	margin: 10px auto;
+}
+.left{
+	float:left;
+	background: #e7e7e7;
+}
+.left li{
+	width: 146px;
+	height: 82px;
+	line-height: 82px;
+	text-align: center;
+	border-left: 1px solid #c6c6c6;
+	border-top:1px solid #c6c6c6;
+}
+.left .last_li{
+	border-bottom: 1px solid #c6c6c6;
+}
+.li_active{
+	background: #fff;
+}
+.right div{
+	float:left;
+	width: 812px;
+	height: 330px;
+	position: relative;
+	display: none;
+}
+.right img{
+	width: 812px;
+	height: 330px;
+	display: none;
+	
+}
+div.con_active{
+	display: block;
+}
+.right ul{
+	width: 812px;
+	position: absolute;
+	top:300px;
+	color:#000;
+}
+.right li{
+	float:left;
+	width: 33.2%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	text-align: center;
+    background: #4a4a4a;
+    opacity: 0.6;
+    margin-right: 1px;
+    color:#fff;
+}
+.flex4 li{
+	width: 24.8%;
+}
+.right .li_color{
+	background: red;
+}
+.no_margin{
+	margin-right: 0;
+}
+img.img_active{
+	display: block;
+}
+</style>
+<script>
+
+</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<ul class="left" id="left">
+			<li class="li_active">最热团购</li>
+			<li>商城特惠</li>
+			<li>名品推荐</li>
+			<li class="last_li">缤纷活动</li>
+		</ul>
+		<div class="right" id="right">
+			<div class="con_active">
+				<img src="images/img1.jpg" class="img_active"/>
+				<img src="images/img2.jpg" />
+				<img src="images/img3.jpg" />
+				<ul>
+					<li class="li_color">第一个第一项</li>
+					<li>第一个第二项</li>
+					<li class="margin-right">第一个第三项</li>
+				</ul>
+			</div>
+
+			<div class="tab2">
+				<img src="images/img4.jpg" class="img_active"/>
+				<img src="images/img5.jpg" />
+				<img src="images/img6.jpg" />
+				<img src="images/img7.jpg" />
+				<ul class="flex4">
+					<li class="li_color">第二个第一项</li>
+					<li>第二个第二项</li>
+					<li>第二个第三项</li>
+					<li class="margin-right">第二个第四项</li>
+				</ul>
+			</div>
+
+			<div>
+				<img src="images/img8.jpg" class="img_active"/>
+				<img src="images/img9.jpg" />
+				<img src="images/img10.jpg" />
+				<ul>
+					<li class="li_color">第三个第一项</li>
+					<li>第三个第二项</li>
+					<li>第三个第三项</li>
+				</ul>
+			</div>
+
+			<div>
+				<img src="images/img11.jpg" class="img_active"/>
+				<img src="images/img12.jpg" />
+				<img src="images/img13.jpg" />
+				<img src="images/img1.jpg" />
+				<ul class="flex4">
+					<li class="li_color">第四个第一项</li>
+					<li>第四个第二项</li>
+					<li>第四个第三项</li>
+					<li class="margin-right">第四个第四项</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/jquery-3.2.0.js"></script>
+	<script>
+		/*
+			1. 最外层的选项卡动起来
+			2. 分写每一个选项卡
+		*/
+		/*
+			actionObj 控制元素
+			passiveObj 被控制的元素
+		*/
+		function tab(actionObj,passiveObj,classNames){
+			actionObj.click(function (){
+
+				passiveObj.hide();
+				//点击li指定的img
+				passiveObj.eq($(this).index()).show();
+
+				actionObj.removeClass(classNames);
+				$(this).addClass(classNames);
+			})		
+		}
+
+		var allLi =  $("#left li");
+		var rightDiv = $("#right div");
+
+		//要让上一个元素去掉class
+		tab(allLi,rightDiv,'li_active');
+
+
+
+		/*
+			在合并代码的时候，把相同的代码抽离出来，封装成一个函数
+			把不同的地方通过传参的方式解决
+		*/
+
+		for( var i = 0; i < rightDiv.length; i++ ){
+			tab1(i);
+		}
+
+		function tab1(index){
+			var firstImgs = rightDiv.eq(index).find("img");
+			var firstLis = rightDiv.eq(index).find("li");
+
+			tab(firstLis,firstImgs,"li_color");
+		}
+
+	</script>
+</body>
+</html>

@@ -19,63 +19,60 @@ body{
 .content .content_left{
 	float:left;
 	width:220px;
-	height:505px;
-	background:#fff;
-	border: 1px solid #e7eaf1;
-    border-radius: 3px;
-    box-sizing: border-box;
-    box-shadow: 0 1px 3px rgba(0,37,55,.06);
+	/*height:505px;*/
+	/*background:#fff;*/
+	/*border: 1px solid #e7eaf1;*/
+    
+    /*box-sizing: border-box;*/
+    
 }
 .content_left .left_head{
-	/*height:100px;*/
-	/*padding: 20px 0;*/
-	/*background:#222;*/
-	/*border-bottom:1px solid #666;*/
-	
-	/*font:20px/100px "微软雅黑";*/
-    /*background: linear-gradient(to right,#f78ca0 0,#f9748f 19%,#fd868c 60%,#fe9a8b 100%);*/
-}
-.left_head .left_head_content{
-	width:170px;
-	height:60px;
 	/*background: pink;*/
-	margin:20px auto 10px;
-	border:1px solid #666;
+	width:100%;
+	height:70px;
+	border:1px solid #e7eaf1;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,37,55,.06);
 	position: relative;
+	margin-bottom:20px;
 }
-.left_head_content .title_c{
+.left_head .title_c{
 	font-size:20px;
-	line-height: 60px;
+	line-height: 70px;
 	text-align:center;
 }
-.left_head_content .title_e{
+.left_head .title_e{
 	position:absolute;
-	left:37px;
+	left:53px;
 	bottom:-8px;
 	font-size:12px;
 	line-height: 16px;
-	padding:0px 5px;
+	padding:0px 10px;
 	background:#fff;
 }
-/*.left_head span{
-	display:block;
-	font-size:18px;
-	line-height:30px;
-	font-weight: bold;
-}*/
-.content_left .left_list{
-	padding:20px 0px 0px 25px;
+.content_left .left_content{
+	padding:20px 0px;
+	border:1px solid #e7eaf1;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,37,55,.06);
+	box-sizing: border-box;
 }
-.left_list .left_list_item{
-	padding-left:30px;
+.left_content .left_list{
+	
+}
+.left_content .left_list_item{
+	padding-left:35px;
 	height:50px;
-	border-left:1px solid #666;
+	/*border-left:1px solid #e7eaf1;*/
 	line-height: 50px;
 	position: relative;
 	cursor:pointer;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	font-size:16px;
 }
+/*.left_list_item:nth-of-type(1){
+	background: pink;
+}*/
 .left_list .left_list_item:nth-of-type(1){
 	color:#a90101;
 }
@@ -83,17 +80,20 @@ body{
 	position:absolute;
 	width:7px;
 	height:7px;
-	background: #a90101;
+	border:1px solid #e7eaf1;
+	background: #fff;
 	border-radius: 50%;
-	left:-4px;
+	left:-5px;
 	top:50%;
 	transform:translateY(-50%);
 }
 .left_list_item i.active{
 	/*position:absolute;*/
-	width:13px;
-	height:13px;
-	left:-7px;
+	width:12px;
+	height:12px;
+	border:2px solid #e7eaf1;
+	background: #fff;
+	left:-8px;
 }
 .left_list_item span{
 	/*width:8px;*/
@@ -103,8 +103,8 @@ body{
 	border-right:5px solid #e7eaf1;
 	position:absolute;
 	right:-5px;
-	top:50%;
-	transform:translateY(-50%);
+	top:20px;
+	/*transform:translateY(-50%);*/
 	transform:rotate(45deg);
 	display: none;
 	/*border: 1px solid #e7eaf1;*/
@@ -117,60 +117,32 @@ body{
 
 
 
-/*.content_left .left_foot{
-	text-align: center;
-	margin-top:20px;
-}
-.left_foot img{
-	width: 100px;
-	height:100px;
-}*/
-
 
 
 .content_left .left_foot{
-	width:100%;
-	height:140px;
-	position: relative;
-	/*background: pink;*/
-}
-.left_foot div,.left_foot img{
-	position: absolute;
-}
-.left_foot .line1{
-	/*width:87px;
-	border-top:1px solid #666;
-	left:25px;*/
-	height:70px;
-	border-left:1px solid #666;
-	left:25px;
-}
-.left_foot .line2{
-	/*height:20px;
-	border-left:1px solid #666;
-	left:calc(50% + 2px);*/
-	width:35px;
-	border-top:1px solid #666;
-	left:25px;
-	top:70px;
+	padding-top:20px;
+	/*position: relative;*/
+	/*border-bottom: 1px solid #e7eaf1;*/
+    /*border-radius: 3px;*/
+    /*box-sizing: border-box;*/
+    text-align: center;
+    /*box-shadow: 0 1px 3px rgba(0,37,55,.06);*/
 }
 .left_foot img{
-	width: 100px;
-	height:100px;
-	left:calc(50% - 40px);
-	top:20px;
-	/*top:calc(50% - 55px);*/
+	width: 75px;
+	height:75px;
+	margin-right:10px;
 }
 .left_foot .info{
-	width:14px;
-	height:100px;
-	right:30px;
-	top:20px;
-	/*background: pink;*/
+	display:inline-block;
 	font-size: 12px;
-	line-height: 16px;
-	text-align: center;
+	line-height:75px;
+	/*margin:61px 0px 0px 10px;*/
+	/*position: absolute;*/
+	/*left:100px;*/
+	/*bottom:20px;*/
 }
+
 
 
 
@@ -182,8 +154,8 @@ body{
 .content .content_right{
 	float:right;
 	width:770px;
-	height:505px;
-	background:#fff;
+	height:480px;
+	/*background:#fff;*/
 	padding:25px;
 	border: 1px solid #e7eaf1;
     border-radius: 3px;

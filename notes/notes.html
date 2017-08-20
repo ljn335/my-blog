@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<link rel="icon" href="../img/star.png" type="image/x-icon"/>
+	<title>李佳宁的个人博客</title>
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/publicHeader.css">
 	<link rel="stylesheet" href="css/notes.css">
@@ -56,9 +57,20 @@
 				<p>深入理解 CSS3 弹性盒布局模型</p>
 				<a href="list/Flexible Box.html" target="_blank"></a>
 			</li>
+			<li class="item">
+				<h3>ECharts.js</h3>
+				<p>ECharts.js的入门学习</p>
+				<a href="list/echarts.html" target="_blank"></a>
+			</li>
 		</ul>
+		<div class="info">目前共计2篇日志。继续努力！</div>
 	</div>
 	<script src="../js/jquery-3.2.0.js"></script>
 	<script src="../js/publicHeader.js"></script>
+	<script>
+		var len=$('.list .item').length;
+		console.log(len)
+		$('.info').text('目前共计 '+len+' 篇日志。继续努力！');
+	</script>
 </body>
 </html>

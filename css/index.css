@@ -1,16 +1,10 @@
-/*----------------------*/
-
-/*---主体-------------------*/
 .content{
 	width:1000px;
-	/*height:2000px;*/
-	/*background:pink;*/
-	margin:auto;
+	margin:20px auto;
 }
+/*banner图*/
 .banner{
 	height:400px;
-	/*background:yellow;*/
-	/*position:relative;*/
 	background: url(../img/banner_bg2.jpg) no-repeat 0px -100px;
 	background-size:100%;
 	display:flex;
@@ -32,21 +26,10 @@
 .banner h3{
 	font-size:20px;
 }
-
-.content{
-	margin:20px auto;
-}
-.content .main_text{
-	/*height:300px;*/
-	/*background:green;*/
-	/*margin-top:20px;*/
-
-}
+/*右侧文章列表*/
 .main_text .main_text_right{
 	float:right;
 	width:74%;
-	/*height:300px;*/
-	/*background:green;*/
 }
 .main_text_right .left_head_list{
 	font-size:14px;
@@ -55,7 +38,6 @@
 	float:left;
 	height:34px;
 	padding:0px 15px;
-	/*background:pink;*/
 	background:rgba(34,34,34,.9);
 	line-height: 34px;
 	border-radius:5px 5px 0px 0px;
@@ -67,36 +49,32 @@
 	box-sizing:border-box;
 	color:#a90101;
 }
-
-.main_text_right .left_text_list{
-	/*margin-top:2px;*/
-}
 .left_text_list .text_list_item{
 	height:100px;
-	margin-bottom: 10px;
-    padding: 20px 20px;
-    background-color: #fff;
+	margin-bottom: 15px;
+    padding: 20px 30px;
+    /*background-color: #fff;*/
     border: 1px solid #e7eaf1;
     border-radius: 3px;
-    /*box-sizing: border-box;*/
     box-shadow: 0 1px 3px rgba(0,37,55,.06);
 }
 .text_list_item .title_time{
 	float:left;
 	width:450px;
 	height:100px;
-	/*background:pink;*/
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
 }
 .title_time h3{
-	font-size:18px;
-	
-	font-family: Merriweather,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	font-size:16px;
+	/*font-weight:normal;*/
 }
 .title_time h3 a{
 	color:#656565;
+}
+.title_time p{
+	font-size:12px;
 }
 .title_time time{
 	font:14px/30px "微软雅黑";
@@ -104,28 +82,21 @@
 }
 .text_list_item .img{
 	float:right;
-	width:150px;
+	width:170px;
 	height:100px;
 	background:pink;
 	overflow: hidden;
 }
 .text_list_item .img img{
-	width:70px;
-	height:70px;
+	height:100%;
 }
-
-
-
+/*左侧个人信息*/
 .main_text .main_text_left{
 	float:left;
 	width:25%;
 	font-size:14px;
-	/*padding:30px 20px;
-	background:rgba(34,34,34,.9);
-	box-sizing:border-box;
-	border-radius: 5px 5px 0px 0px;*/
 	padding: 30px 20px;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border: 1px solid #e7eaf1;
     border-radius: 3px;
     box-sizing: border-box;
@@ -141,7 +112,6 @@
 	height:70px;
 	border-radius: 50%;
 	overflow: hidden;
-	/*box-shadow: 2px 2px 2px #ccc;*/
 	margin:auto;
 }
 .my_info .img img{
@@ -176,7 +146,7 @@
 	transition: .4s;
 	color:#4e4e4e;
 }
-
+/*左侧技能标签*/
 .main_text_left .label{
 	padding-top: 30px;
 	line-height: 22px;
@@ -184,7 +154,7 @@
 }
 .label a{
 	float:left;
-	color:#a6abb2;
+	color:#bbb;
 	padding:0px 8px;
 	margin:0px 2px 8px 0px;
 }
@@ -201,31 +171,20 @@
 
 
 .foot{
-	/*width:1000px;
-	border-top:1px solid #a90101;
-	margin: 30px auto 0px;
-	text-align: center;
-	padding:30px 0px;*/
 	padding: 20px 0;
     border-top: 1px solid #e7eaf1;
     text-align: center;
-	font:14px/20px "微软雅黑";
+	font:12px/20px "微软雅黑";
 	color:#a6abb2;
 }
 
 .foot .foot_list{
-	/*margin-top:15px;*/
 	display:inline-block;
-	/*width:500px;*/
-	/*font:14px/20px "微软雅黑";*/
-	
 }
 .foot_list .foot_list_item{
 	float:left;
-	border-right:1px solid #bbb;
+	/*border-right:1px solid #bbb;*/
 	padding:0px 10px;
-	/*margin-bottom: 7px;*/
-	/*font:12px/18px "微软雅黑";*/
 }
 .foot_list li.active{
 	border-right:0px;
@@ -233,25 +192,3 @@
 .foot_list_item a{
 	color:#a6abb2;
 }
-/*.foot .foot_btn{
-	height:100%;
-	margin:auto;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-}
-.foot_btn a{
-	width:50px;
-	height:50px;
-	border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    margin:20px;
-}
-.foot_btn .photo{
-	width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    box-shadow: 0 0 0 3px #000, 0 0 0 5px #fff;
-}*/

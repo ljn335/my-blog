@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../css/public_style.css">
+</head>
+<body>
+	<header class="head">
+		<div class="head_content">
+			<div class="head_left">
+				<h1 class="logo"></h1>
+				<h2 class="title">ECharts.js的入门学习</h2>
+				<div class="info">
+					<span class="time"><i></i>2017年7月1日</span>
+					<span class="visits"><i></i>20</span>
+					<span class="comments"><i></i>0</span>
+				</div>
+			</div>
+			<div class="head_right">
+				<img src="../img/weixin.png" alt="">
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<!-- <h2>
+			一、EChart.js的使用步骤
+		</h2> -->
+		<ul class="list">
+			<li class="item">
+				<h3 class="title">1.引入echarts.js</h3>
+				<div class="code">
+					<xmp><script type="text/javascript" src="js/echarts.js"></script></xmp>
+				</div>
+				<p class="info">
+					echarts.js文件下载地址： 
+					<a href="http://echarts.baidu.com/" target="_blank">http://echarts.baidu.com/</a>
+				</p>
+			</li>
+			<li class="item">
+				<h3 class="title">2.准备一个放图表的容器</h3>
+				<div class="code">
+					<xmp><div id="chartmain" style="width:600px; height: 400px;"></div></xmp>
+				</div>
+			</li>
+			<li class="item">
+				<h3 class="title">3.设置参数，初始化图表</h3>
+				<div class="code">
+					<xmp>
+						<script type="text/javascript">
+					       	//指定图标的配置和数据
+					        var option = {
+					            title:{
+					                text:'ECharts 数据统计'
+					            },
+					            tooltip:{},
+					            legend:{
+					                data:['用户来源']
+					            },
+					            xAxis:{
+					                data:["Android","IOS","PC","Ohter"]
+					            },
+					            yAxis:{},
+					            series:[{
+					                name:'访问量',
+					                type:'line', //type的值为'line',为折线图；值为'bar',为柱状图
+					                data:[500,200,360,100]
+					            }]
+					        };
+					        //初始化echarts实例
+					        var myChart = echarts.init(document.getElementById('chartmain'));
+						//使用制定的配置项和数据显示图表
+					        myChart.setOption(option);
+						</script>
+					</xmp>
+				</div>
+				<div class="img clearfix">
+					<div>
+						<img src="../img/echarts_2.png" alt="">
+						<span>折线图效果图</span>
+					</div>
+					<div>
+						<img src="../img/echarts_3.png" alt="">
+						<span>柱状图效果图</span>
+					</div>
+				</div>
+				<p class="info">饼图和折线图、柱状图有一点区别。主要是在参数和数据绑定上。饼图没有X轴和Y轴的坐标，数据绑定上也是采用value 和name对应的形式。
+				</p>
+				<div class="code">
+					<xmp>
+						<script type="text/javascript">
+					       	//指定图标的配置和数据
+					        var option = {
+					            title:{
+					                text:'ECharts 数据统计'
+					            },            
+					            series:[{
+					                name:'访问量',
+					                type:'pie',    
+					                radius:'60%', 
+					                data:[
+					                    {value:500,name:'Android'},
+					                    {value:200,name:'IOS'},
+					                    {value:360,name:'PC'},
+					                    {value:100,name:'Ohter'}
+					                ]
+					            }]
+					        };
+					        //初始化echarts实例
+					        var myChart = echarts.init(document.getElementById('chartmain'));
+						//使用制定的配置项和数据显示图表
+					        myChart.setOption(option);
+						</script>
+					</xmp>
+				</div>
+				<div class="img clearfix">
+					<div>
+						<img src="../img/echarts_4.png" alt="">
+						<span>饼状图效果图</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
