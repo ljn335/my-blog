@@ -1,11 +1,13 @@
-$('#text').click(function (){
-	$(this).text("");
-	$('.emoticons_list').removeClass('show');
-}).blur(function (){
-	if($(this).val()==''){
-		$(this).text("您还可以输入100个字");
-	}
+$('#text').focus();
+
+// 表情图标的背景定位
+$.each($('.emoticons_list .item'),function (i,value){
+	$(this).find('a').css({
+		'background-position-x':-i*20
+	});
 });
+
+// 移入和移出表情按钮时，添加边框
 $('.emoticons .emoticons_item').hover(
 	function (){
 		$(this).css({
@@ -18,9 +20,15 @@ $('.emoticons .emoticons_item').hover(
 		})
 	}
 );
+
+//点击表情按钮给表情列表添加class,来控制表情列表的显示或隐藏
 $('.emoticons .emoticons_item').click(function (){
 	$('.emoticons_list').toggleClass('show');
+	$('#text').focus();
 });
+
+// 移入或移出表情列表的每个icon时，添加边框
+// 点击表情列表的每个icon时，把该表情添加到文本输入框中
 $('.emoticons_list .item').hover(
 	function (){
 		$(this).css("border","1px solid #4ca0d9");
@@ -32,35 +40,42 @@ $('.emoticons_list .item').hover(
 			'border-bottom':'1px solid #d3e4f0'
 		});
 	}
-).click(function (){
-	console.log(1)
-});
+);
 
-// var w = window.innerWidth;
-// var h = window.innerHeight;
-// var promptDiv = $('<div></div>').css({
-// 	'width':w,
-// 	'height':h,
-// 	'background':'rgba(0,0,0,.3)',
-// 	'position':'fixed',
-// 	'left':0,
-// 	'top':0
+//生成i标签，并添加到文本框
+function createI(index){
+	var iconI = $("<i></i>");
+	iconI.css({
+		'background-position-x':-index*16
+	})
+	$('#text').append(iconI);
+}
+
+//当点击文本框时，
+// $('#text').click(function (){
+// 	console.log($(this).attr('placeholder'))
+// 	$('#text').focus()
+// 	if($(this).html()=='请输入评论'){
+// 		$(this).text("");
+// 		$('.emoticons_list').removeClass('show');
+// 	}
+// 	$(this).text("");
+// 	$('.emoticons_list').removeClass('show');
+// }).blur(function (){
+// 	if($(this).html()==''){
+// 		$(this).text("请输入评论");
+// 	}
 // });
-// $('body').append(promptDiv);
-// promptDiv.addClass('Prompt');
-// $(".foot").after(promptDiv);
 
-// console.log(window.screen.width,window.screen.height)
-// console.log(window.outerWidth,window.outerHeight)
-// console.log(window.innerWidth,window.innerHeight)
-// console.log(window.outerWidth,window.outerHeight)
-
-
+//当点击‘提交评论’按钮时，
+//（1）如果文本框的内容为空，就弹出“请输入内容”
+//（2）如果文本框的内容不为空，就弹出“评论成功！”，并且清空文本框内容
 $('.submit').click(function (){
-	if($('#text').val()==''||$('#text').val()=='您还可以输入100个字'){
+	if($('#text').val()==''){
 		alert('评论内容为空，请输入内容！');
+		$('#text').focus();
 	}else{
 		alert('评论成功！');
-		$('#text').val("您还可以输入100个字");
-	}
+		$('#text').val('');
+		$('#text').focus();	}
 });

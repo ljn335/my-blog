@@ -52,13 +52,11 @@ body{
 }
 .content .experience{
 	margin:50px 0px;
-	padding:30px;
-	/*background-color: #fff;*/
-    border: 1px solid #e7eaf1;
+	padding:70px 30px 50px;
+	border: 1px solid #e7eaf1;
     border-radius: 3px;
     box-sizing: border-box;
     box-shadow: 0 1px 3px rgba(0,37,55,.06);
-	/*border-top:1px solid rgb(231, 234, 241);*/
 }
 /*.experience .title{
 	margin-bottom:20px;
@@ -110,7 +108,7 @@ body{
 .item .name{
 	width:110%;
 	left:calc(50% - 71px);
-	top:-85px;
+	bottom:140px;
 	text-align: center;
 }
 .item div.active{

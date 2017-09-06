@@ -27,15 +27,26 @@
 		<div class="img">
 			<img src="img/banner1.jpg" alt="">
 		</div>
-		<p class="text">所谓行万里路，必先始于足下。刚开始学习WEB前端基础的时候，老师说，其实你们学的这个后面真正去工作的时候可能也不是很会用到，所以就有很多人会问，既然我们都用不到，那干嘛还学呀？其实，对于一个程序员来说，你不仅要有很好的后端专业能力，你还应当具备一定的前端素养，知道一些起码的前端知识。</p>
-		<p class="text">来到妙味课堂的前两个月，我们是以基础为主，主要学HTML+CSS，后四个月的难点在于JS课程体系，可以说这个过程其实也是一个循循渐进、由简到难的过程。</p>
-		<p class="text">JS是相对于web前端学习的重点吧，也是很多人没办法很好接触的地方，当然，自己在这里的学习也是有不足的地方。像一些对属性的操作的标记之类，懂得怎么用，但是不是很熟悉，所以经常在操作的时候要去查手册。学的最不好的一个地方应该是将数组中的元素按照一定的规则或者顺序添加到指定或对应的表格中。个人对JS的理解其实就是大量算法的集合，因为很多时候你都会用到函数，只是多了一些找元素和对元素绑定标记的过程，最重要的还是构造函数，调用函数的过程！</p>
-		<p class="text">接触前端一年了，虽然遇到了很多棘手和纠结的问题，好在自己坚持了下来，反而让我觉得编程是一件很有挑战、很有趣的事情。</p>
+		<div class="text">
+			<p>
+				接触前端开发1年了，从最初的HTML+CSS学起，再到javascript，jquery，ajax等等，而这只是前端开发岗位最基本的技能要求。现在的前端要学的技术太多了，不是只会切图、DIV+CSS布局就行，如果在实际项目中，想方便编码和提高效率，就不能只满足于现状，需要学习更多的框架和知识来提高自己的技能水平。
+			</p>
+		</div>
+		<div class="text">
+			<p>
+				来到妙味课堂的前两个月，我们是以基础为主，主要学HTML+CSS，后四个月的难点在于JS课程体系，可以说这个过程其实也是一个循循渐进、由简到难的过程。为了尽快的融入到这个陌生的领域，我在去上培训班之前就自学完HTML+CSS的基础知识，腾出更多的时间来学习JS，JS相对来说难一点，因为它才是一门真正意义上的程序语言，涉及到函数、变量、算法等知识。在学习JavaScript的过程中，当想实现的效果不能出来，控制台不停报错时，心情也会烦躁和郁闷，但当问题解决、代码在浏览器上成功运行时，还是有一些成就感的。
+			</p>
+		</div>
+		<div class="text">
+			<p>
+				这个过程虽然遇到了很多棘手和纠结的问题，好在自己坚持了下来，反而让我觉得编程是一件很有挑战、很有趣的事情。
+			</p>
+		</div>
 	</div>
 	<footer class="foot">
 		<div class="foot_content">
 			<h3>发表评论</h3>
-			<div class="textBox">
+			<form class="textBox" action="" method="post" name="Message" >
 				<div class="textBox_head">
 					<ul class="ico_list clearfix">
 						<li class="emoticons">
@@ -43,28 +54,28 @@
 								<i></i>
 							</a>
 							<ul class="emoticons_list clearfix">
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/微笑';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/撇嘴';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/色';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/咒骂';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-right:0px;" class="item">
+								<li style="border-right:0px;" class="item" onClick="document.forms[0].gb_word.value+='/得意';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-bottom:0px;" class="item">
+								<li style="border-bottom:0px;" class="item" onClick="document.forms[0].gb_word.value+='/猪头';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-bottom:0px;" class="item">
+								<li style="border-bottom:0px;" class="item" onClick="document.forms[0].gb_word.value+='/玫瑰';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-bottom:0px;" class="item">
+								<li style="border-bottom:0px;" class="item" onClick="document.forms[0].gb_word.value+='/爱心';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
 							</ul>
@@ -72,10 +83,10 @@
 					</ul>
 				</div>
 				<div class="textBox_main">
-					<p></p>
-					<textarea  id="text" name="">您还可以输入100个字</textarea>
+					<!-- <div  id="text" contentEditable='true'>请输入评论</div> -->
+					<textarea  id="text" name="gb_word" placeholder="请输入评论"></textarea>
 				</div>
-			</div>
+			</form>
 			<button class="submit">提交评论</button>
 			<ul class="foot_list">
 				<li>GitHub</li>
@@ -84,7 +95,6 @@
 			</ul>
 		</div>
 	</footer>
-	<!-- <div class="Prompt"></div> -->
 	<script src="../js/jquery-3.2.0.js"></script>
 	<script src="js/public.js"></script>
 </body>

@@ -27,27 +27,41 @@
 		<div class="img">
 			<img src="img/banner1.jpg" alt="">
 		</div>
-		<p class="text">在JavaScript 中，this的指向是动态变化的，很可能在写程序的过程中，无意中破坏掉this的指向，所以我们需要一种可以把this的含义固定的技术，于是就有了call，apply 和bind这三个方法，来改变函数体内部 this 的指向，因为函数存在「定义时上下文」和「运行时上下文」以及「上下文是可以改变的」这样的概念</p>
-		<h3>三者的相似之处：</h3>
-		<p class="text">
-			1、都是用来改变函数的this对象的指向的。
-			2、第一个参数都是this要指向的对象。
-			3、都可以利用后续参数传参。
-		</p>
-		<h3>三者的区别：</h3>
-		<p class="text">
-			call和apply都是对函数的直接调用，而bind方法返回的仍然是一个函数，因此后面还需要()来进行调用才可以。
-		</p>
-		<h3>call和apply的区别：</h3>
-		<p class="text" style="font-weight:bold;">apply：fun.call(thisArg[, arg1[, arg2[, ...]]])</p>
-		<p class="text">最多只能有两个参数——新this对象和一个数组 argArray。如果给该方法传递多个参数，则把参数都写进这个数组里面，当然，即使只有一个参数，也要写进数组里面。如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象将被用作 thisObj，并且无法被传递任何参数。</p>
-		<p class="text" style="font-weight:bold;">call：fun.apply(thisArg, [argsArray])</p>
-		<p class="text">则是直接的参数列表，主要用在js对象各方法互相调用的时候，使当前this实例指针保持一致,或在特殊情况下需要改变this指针。如果没有提供 thisObj 参数，那么 Global 对象被用作 thisObj。</p>
+		<div class="text">
+			<p>
+				在JavaScript 中，this的指向是动态变化的，很可能在写程序的过程中，无意中破坏掉this的指向，所以我们需要一种可以把this的含义固定的技术，于是就有了call，apply 和bind这三个方法，来改变函数体内部 this 的指向，因为函数存在「定义时上下文」和「运行时上下文」以及「上下文是可以改变的」这样的概念。
+			</p>
+		</div>
+		<div class="text">
+			<h3>三者的相似之处：</h3>
+			<p>
+				1、都是用来改变函数的this对象的指向的。
+				2、第一个参数都是this要指向的对象。
+				3、都可以利用后续参数传参。
+			</p>
+		</div>
+		<div class="text">
+			<h3>三者的区别：</h3>
+			<p>
+				call和apply都是对函数的直接调用，而bind方法返回的仍然是一个函数，因此后面还需要()来进行调用才可以。
+			</p>
+		</div>
+		<div class="text">
+			<h3>call和apply的区别：</h3>
+			<p>
+				<span>apply：fun.call(thisArg[, arg1[, arg2[, ...]]])</span>
+				最多只能有两个参数——新this对象和一个数组 argArray。如果给该方法传递多个参数，则把参数都写进这个数组里面，当然，即使只有一个参数，也要写进数组里面。如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象将被用作 thisObj，并且无法被传递任何参数。
+			</p>
+			<p>
+				<span>call：fun.apply(thisArg, [argsArray])</span>
+				则是直接的参数列表，主要用在js对象各方法互相调用的时候，使当前this实例指针保持一致,或在特殊情况下需要改变this指针。如果没有提供 thisObj 参数，那么 Global 对象被用作 thisObj。
+			</p>
+		</div>
 	</div>
 	<footer class="foot">
 		<div class="foot_content">
 			<h3>发表评论</h3>
-			<div class="textBox">
+			<form class="textBox" action="" method="post" name="Message" >
 				<div class="textBox_head">
 					<ul class="ico_list clearfix">
 						<li class="emoticons">
@@ -55,28 +69,28 @@
 								<i></i>
 							</a>
 							<ul class="emoticons_list clearfix">
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/微笑';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/撇嘴';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/色';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li class="item">
+								<li class="item" onClick="document.forms[0].gb_word.value+='/咒骂';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-right:0px;" class="item">
+								<li style="border-right:0px;" class="item" onClick="document.forms[0].gb_word.value+='/得意';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-bottom:0px;" class="item">
+								<li style="border-bottom:0px;" class="item" onClick="document.forms[0].gb_word.value+='/猪头';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-bottom:0px;" class="item">
+								<li style="border-bottom:0px;" class="item" onClick="document.forms[0].gb_word.value+='/玫瑰';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
-								<li style="border-bottom:0px;" class="item">
+								<li style="border-bottom:0px;" class="item" onClick="document.forms[0].gb_word.value+='/爱心';document.forms[0].gb_word.focus()">
 									<a href="javascript:;"></a>
 								</li>
 							</ul>
@@ -84,10 +98,10 @@
 					</ul>
 				</div>
 				<div class="textBox_main">
-					<p></p>
-					<textarea  id="text" name="">您还可以输入100个字</textarea>
+					<!-- <div  id="text" contentEditable='true'>请输入评论</div> -->
+					<textarea  id="text" name="gb_word" placeholder="请输入评论"></textarea>
 				</div>
-			</div>
+			</form>
 			<button class="submit">提交评论</button>
 			<ul class="foot_list">
 				<li>GitHub</li>
